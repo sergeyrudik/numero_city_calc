@@ -45,6 +45,7 @@ function calculateKversum(word) {
       sum += numerologyValuesLatin[letter];
     }
   }
+  
   // Доп расчет для двузначных чисел
   while (sum > 9) {
     let tempSum = 0;
