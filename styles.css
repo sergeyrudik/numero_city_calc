@@ -69,6 +69,7 @@ body {
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
   max-width: 76rem;
+  font-size: 2rem;
 }
 
 .result.visible {
