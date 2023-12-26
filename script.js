@@ -45,7 +45,7 @@ function calculateKversum(word) {
       sum += numerologyValuesLatin[letter];
     }
   }
-  
+
   // Доп расчет для двузначных чисел
   while (sum > 9) {
     let tempSum = 0;
@@ -59,4 +59,9 @@ function calculateKversum(word) {
   }
 
   return sum;
+}
+
+function filterInput(input) {
+  // Заменяем все спецсимволы и цифры на пустую строку
+  input.value = input.value.replace(/[^\p{L}\s]/gu, '');
 }

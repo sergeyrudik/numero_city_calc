@@ -15,7 +15,7 @@
     </p>
   </div>
   <form onsubmit="return false;">
-    <input type="text" id="inputField" class="input" placeholder="Введите текст">
+    <input type="text" id="inputField" class="input" placeholder="Введите текст" oninput="filterInput(this)">
     <button onclick="processInput()" class="button">Получить ответ</button>
   </form>
     <div id="outputField" class="result">
