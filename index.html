@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Красивая страница</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="description">
+    <p>
+      Инструмент, определяющий кверсумму для нумерологии: он сводит буквы, числа и текст к числовым значениям от 1 до 9.
+      Это возможно как для русского, так и для латинского/английского алфавитов.
+    </p>
+  </div>
+  <form onsubmit="return false;">
+    <input type="text" id="inputField" class="input" placeholder="Введите текст">
+    <button onclick="processInput()" class="button">Получить ответ</button>
+  </form>
+    <div id="outputField" class="result">
+      Ваше число: <span id="resultNumber"></span>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

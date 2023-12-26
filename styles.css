@@ -1,0 +1,90 @@
+/* Твои стили */
+html {
+  font-size: 14px;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 4rem 2rem;
+  color: #091e42;
+  line-height: 1.35;
+  min-height: 100vh;
+  background: #fffbf8;
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto; /* Центрирование по горизонтали */
+  max-width: 800px; /* Максимальная ширина контейнера */
+  padding: 0 20px; /* Добавление отступов по бокам */
+}
+
+.input {
+  width: 100%;
+  font-size: 2rem;
+  font-family: inherit;
+  text-align: center;
+  padding: 1rem 1rem 1rem 2.4rem;
+  box-sizing: border-box;
+  font-weight: 700;
+  background: #fffbf8;
+  border: solid 1px #add8e6;
+  border-radius: 8px;
+}
+
+.button {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #866157;
+  color: #fde6e0;
+  cursor: pointer;
+  transition: all .25s;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: #78574e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+}
+
+.button:active {
+  background: #674941;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+.result {
+  display: none; /* Начинаем с скрытия блока */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  max-width: 76rem;
+}
+
+.result.visible {
+  opacity: 1;
+  transition: all .25s;
+  max-height: 100rem;
+}
+
+.description {
+  text-align: center;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #333;
+}
