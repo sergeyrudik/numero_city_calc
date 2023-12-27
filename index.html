@@ -18,9 +18,11 @@
     <input type="text" id="inputField" class="input" placeholder="Введите текст" oninput="filterInput(this)">
     <button onclick="processInput()" class="button">Получить ответ</button>
   </form>
-    <div id="outputField" class="result">
-      Ваше число: <span id="resultNumber"></span>
-    </div>
+  <div id="outputField" class="result" style="display: none;">
+    <p>Ваше число: <span id="resultNumber"></span></p>
+    <p id="explanation"></p>
+    <p id="explanationText"></p> <!-- Новый элемент для объяснения -->
+  </div>
 </div>
 
 <script src="script.js"></script>

@@ -1,17 +1,57 @@
 function processInput() {
   const inputText = document.getElementById('inputField').value;
   const resultNumber = document.getElementById('resultNumber');
-
-  // Вызываем функцию calculateKversum для получения результата
-  const result = calculateKversum(inputText);
-
-  // Помещаем результат в элемент resultNumber
-  resultNumber.textContent = result;
-
-  // Делаем элемент с результатом видимым
+  const explanation = document.getElementById('explanation');
+  const explanationText = document.getElementById('explanationText');
   const outputField = document.getElementById('outputField');
+  const sum = calculateKversum(inputText);
+  const explanationTextContent = suggestForSum(sum);
+
+  resultNumber.textContent = sum;
+
+  if (explanationTextContent !== '') {
+    explanationText.textContent = explanationTextContent;
+  } else {
+    explanationText.textContent = 'Нет информации для данного числа.';
+  }
+
   outputField.style.display = 'block';
 }
+
+function suggestForSum(sum) {
+  let explanation = '';
+  switch (sum) {
+    case 1:
+      explanation = 'Город для лидеров! Если вы не боитесь перемен, не видите препятствий на пути к цели, то смело переезжайте.';
+      break;
+    case 2: 
+      explanation = 'Не любите скорость и гонку за успехом? Вам сюда! В этом городе сложно быть одному, но комфортно жить, объединяясь в компании.';
+      break;
+    case 3: 
+      explanation = 'Город для творческих личностей, которые ценят оригинальность и спонтанность, верят в любовь и любят роскошь';
+      break;
+    case 4: 
+      explanation = 'Здесь вас ждёт стабильность и комфорт. А головокружительной карьеры и огромных денег $ вряд ли получится заработать.';
+      break;
+    case 5: 
+      explanation = 'Город взлетов и падений - никакой стабильности. То вы на высоте * , то в самом низу.';
+      break;
+    case 6: 
+      explanation = 'Патриархальный город - здесь чтут семейные ценности и ценят хорошее образование.';
+      break;
+    case 7: 
+      explanation = 'Город любителей одиночества и философии, увлечённых эзотерикой и духовными практиками.';
+      break;
+    case 8: 
+      explanation = 'Тут цель всегда оправдывает средства, и к ней идут очень быстро. Инфраструктура комфортная, но всегда нужно держать ухо востро.';
+      break;
+    case 9: 
+      explanation = 'Здесь легко стать богатым, даже если вы приезжий. Жизнь течёт размеренно, а местные отлично разбираются в ценностях бытия.';
+      break;
+    }
+
+  return explanation;
+};
 
   // Функция для вычисления кверсуммы слова в заданной системе нумерологии
 function calculateKversum(word) {
